@@ -16,7 +16,7 @@ elif [[ -z "$KAFKA_SERVER" ]]; then
 fi
 
 if [[ -n "$ZOOKEEPER_SERVER" ]]; then
-    sed -i "s/zookeeper:9092/$ZOOKEEPER_SERVER/g" "/etc/burrow/burrow.toml"
+    sed -i "s/zookeeper:2181/$ZOOKEEPER_SERVER/g" "/etc/burrow/burrow.toml"
     unset ZOOKEEPER_SERVER
 elif [[ -z "$ZOOKEEPER_SERVER" ]]; then
     echo "ERROR: No zookeeper servers configuration provided in environment."
